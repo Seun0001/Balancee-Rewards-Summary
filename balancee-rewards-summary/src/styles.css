@@ -16,10 +16,25 @@ body {
 .rewards-summary-page {
   width: 100%;
   padding: 20px;
-  background: #fff;
+  position: relative; /* Ensures pseudo-element positioning */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.8s ease-in-out;
   border-radius: 8px;
+  background: linear-gradient(154.9deg, #00FF00 43.4%, #00FFFF 43.4%);
+  /* This sets the gradient to match the body gradient */
+}
+
+/* Pseudo-element for Gradient Background */
+.rewards-summary-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(154.9deg, #00FF00 50%, #00FFFF 50%);
+  z-index: -1; /* Places it behind the content */
+  border-radius: 8px; /* Matches container's border-radius */
 }
 
 /* Header Styles */
@@ -85,22 +100,25 @@ h2 {
   body {
     background: linear-gradient(132deg, #00FFFF 50%, #00FF00 50%);
   }
+  
   .rewards-summary-page {
     padding: 15px;
+    background: linear-gradient(132deg, #00FFFF 45.5%, #00FF00 45.5%);
+    /* Matching background gradient to body for blending effect */
   }
-
+  
   h1 {
     font-size: 2rem;
   }
-
+  
   h2 {
     font-size: 1.6rem;
   }
-
+  
   .earnings-overview .overview-item {
     font-size: 1.2rem;
   }
-
+  
   .cashback-history .history-item {
     font-size: 1.2rem;
   }
