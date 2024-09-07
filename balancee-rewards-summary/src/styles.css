@@ -83,7 +83,7 @@ h2 {
 /* Responsive Design */
 @media (max-width: 768px) {
   body {
-    background: linear-gradient(132deg, #00FF00 50%, #00FFFF 50%);
+    background: linear-gradient(132deg, #00FFFF 50%, #00FF00 50%);
   }
   .rewards-summary-page {
     padding: 15px;
